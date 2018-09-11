@@ -1,0 +1,10 @@
+---
+applications:
+- name: testapp
+  memory: 1G
+  instances: 1
+  path: ../../target/testapp.jar
+  buildpack: java_buildpack
+  env:
+    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 10.0.+ } }'
+  no-route: true
